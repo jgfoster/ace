@@ -1,3 +1,4 @@
+<true><foo><foo: 8r377 bar: -99>
 "A ""complete"" Smalltalk syntax for code (not methods)"
 | byteArray literalArray runtimeArray y |
 (nil isNil and: [true & false not]) ifFalse: [self halt].
