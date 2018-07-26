@@ -1,6 +1,22 @@
-<true><foo><foo: 8r377 bar: -99>
+"single-line comment with ""double quotes"""
+"multi-line
+comment"
+
+"Pragmas"
+<true><false><nil><_remoteNil>	"UnaryPragma SpecialLiteral"
+<foo>	"UnaryPragma Identifier"
+<protected><unprotected><requiresVc>	"invalid UnaryPragma Identifier"
+<foo: 8r377 bar: -99>	"KeywordPragma with numbers"
+<foo: 'abc' bar: $a>	"KeywordPragma with string and character"
+<a: #abc b: #'abc' c: #key:word: d: #+ >		"KeywordPragma with symbols"
+<foo: true + 3>				"KeywordPragma with special literal and binary selector"
+<primitive: 99>			"invalid KeywordPragma"
+
+
 "A ""complete"" Smalltalk syntax for code (not methods)"
 | byteArray literalArray runtimeArray y |
+<pragma: 1>
+| illegal |
 (nil isNil and: [true & false not]) ifFalse: [self halt].
 y := thisContext stack size + super size.
 byteArray := #[2 2r100 8r20 16rFF].
