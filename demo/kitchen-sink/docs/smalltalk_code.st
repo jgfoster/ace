@@ -16,7 +16,6 @@ comment"
 "A ""complete"" Smalltalk syntax for code (not methods)"
 | byteArray literalArray runtimeArray y |
 <pragma: 1>
-| illegal |
 (nil isNil and: [true & false not]) ifFalse: [self halt].
 y := thisContext stack size + super size.
 byteArray := #[2 2r100 8r20 16rFF].
